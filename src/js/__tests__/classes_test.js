@@ -29,13 +29,21 @@ test('character method "levelUp" - throw', () => {
   expect(received).toThrow(expected);
 });
 
-// test('character method "damage" - health change', () => {
-//   const unit1 = new Bowerman ('герой1')
-//   unit1.damage(20);
-//   const received = unit1.damage(20);
-//   const expected = 85;
-//   expect(received).toEqual(expected);
-// });
+test('character method "damage 20" - health change', () => {
+  const unit1 = new Bowerman ('герой1')
+  unit1.damage(20);
+  const received = unit1.health;
+  const expected = 85;
+  expect(received).toEqual(expected);
+});
+
+test('character method "damage 2000" - health change', () => {
+  const unit1 = new Bowerman ('герой1')
+  unit1.damage(2000)
+  const received = unit1.health;
+  const expected = 0;
+  expect(received).toEqual(expected);
+});
 
 test('Bowerman - instance of Caracter', () => {
   const received = new Bowerman ('герой1')
