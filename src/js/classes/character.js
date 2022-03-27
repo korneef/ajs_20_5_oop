@@ -11,15 +11,9 @@ export default class Character {
 
     this.name = name;
     this.type = type;
+    this.health = 100;
+    this.level = 1;
   }
-
-  health = 100;
-
-  level = 1;
-
-  attack;
-
-  defence;
 
   levelUp() {
     if (this.health !== 0) {
